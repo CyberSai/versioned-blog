@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+/** @version 1 */
 class PostStoreRequest extends FormRequest
 {
     public function rules()

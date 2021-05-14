@@ -8,6 +8,7 @@ use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
 
+/** @version 1 */
 class PostController extends Controller
 {
     public function index(int $version, User $user)

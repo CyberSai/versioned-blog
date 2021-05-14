@@ -7,6 +7,7 @@ use App\Http\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Http\Request;
 
+/** @version 1 */
 class UserController extends Controller
 {
     public function index(int $version)
