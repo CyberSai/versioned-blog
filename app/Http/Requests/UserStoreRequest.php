@@ -23,4 +23,11 @@ class UserStoreRequest extends FormRequest
             'api_token' => Str::random(200),
         ]);
     }
+
+    public function validated()
+    {
+        $validated = parent::validated();
+        $validated['password'] = bcrypt($validated['password']);
+        return $validated;
+    }
 }
