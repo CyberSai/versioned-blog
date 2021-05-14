@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -23,4 +24,6 @@ Route::prefix('{version}')->where(['version' => '\d+'])->group(function () {
         Route::apiResource('users.posts', PostController::class)
             ->only(['index', 'store', 'show'])->scoped()->shallow();
     });
+
+    Route::apiResource('categories', CategoryController::class)->only('index');
 });
