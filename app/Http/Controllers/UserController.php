@@ -11,7 +11,7 @@ class UserController extends Controller
 {
     public function index(int $version)
     {
-        $users = User::query()->paginate();
+        $users = User::query()->latest()->paginate();
 
         return UserResource::collection($users);
     }

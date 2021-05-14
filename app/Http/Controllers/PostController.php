@@ -12,7 +12,7 @@ class PostController extends Controller
 {
     public function index(int $version, User $user)
     {
-        $posts = $user->posts()->paginate();
+        $posts = $user->posts()->latest()->paginate();
 
         return PostResource::collection($posts);
     }
