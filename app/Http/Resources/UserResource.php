@@ -10,23 +10,11 @@ class UserResource extends JsonResource
 {
     public function toArray($request)
     {
-        $data = [
+        return [
             'id' => $this->id,
             'name' => $this->name,
             'email' => $this->email,
-            'email_verified_at' => $this->email_verified_at,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
+            'api_token' => $this->when($request->routeIs('users.store'), $this->api_token),
         ];
-
-        if ($request->routeIs('users.index')) {
-            return Arr::only($data, ['id', 'email', 'name']);
-        }
-
-        if ($request->routeIs('users.store')) {
-            return Arr::add($data, 'api_token', $this->api_token);
-        }
-
-        return $data;
     }
 }
