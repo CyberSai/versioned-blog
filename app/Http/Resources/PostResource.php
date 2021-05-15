@@ -10,12 +10,14 @@ class PostResource extends JsonResource
 {
     public function toArray($request)
     {
-        $data = parent::toArray($request);
-
-        if ($request->route('version') < 2) {
-            return Arr::except($data, 'category_id');
-        }
-        
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'title' => $this->title,
+            'content' => $this->content,
+            'user' => new UserResource($this->whenLoaded('user')),
+            $this->mergeWhen($request->route('version') >= 2, [
+                'category' => new CategoryResource($this->whenLoaded('category')),
+            ]),
+        ];
     }
 }

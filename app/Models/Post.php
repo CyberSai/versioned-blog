@@ -22,8 +22,8 @@ class Post extends Model
 
     public function category()
     {
-        return $this->belongsTo(Category::class)->withDefault([
-            'name' => 'General'
-        ]);
+        return $this->belongsTo(Category::class)->withDefault(function () {
+            return Category::query()->first();
+        });
     }
 }

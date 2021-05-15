@@ -12,14 +12,14 @@ class UserController extends Controller
 {
     public function index(int $version)
     {
-        $users = User::query()->latest()->paginate();
+        $users = User::query()->latest()->simplePaginate();
 
         return UserResource::collection($users);
     }
 
     public function store(int $version, UserStoreRequest $request)
     {
-        ($user = new User)->forceFill($request->validated())->save();
+        $user = User::query()->forceCreate($request->validated());
 
         return new UserResource($user->refresh());
     }
