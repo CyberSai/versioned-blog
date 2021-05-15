@@ -2,6 +2,7 @@
 <p align="center">
 <img alt="GitHub Workflow Status (branch)" src="https://img.shields.io/github/workflow/status/CyberSai/versioned-blog/Laravel/main?label=main%20build">
 <img alt="GitHub Workflow Status (branch)" src="https://img.shields.io/github/workflow/status/CyberSai/versioned-blog/Laravel/v1.x?label=v1.x%20build">
+<img alt="GitHub Workflow Status (branch)" src="https://img.shields.io/github/workflow/status/CyberSai/versioned-blog/Laravel/v2.x?label=v2.x%20build">
 </p>
 
 ## About Versioned Blog
