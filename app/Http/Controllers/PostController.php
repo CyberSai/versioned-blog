@@ -13,7 +13,7 @@ class PostController extends Controller
 {
     public function index(int $version, User $user)
     {
-        $posts = $user->posts()->latest()->paginate();
+        $posts = $user->posts()->latest()->simplePaginate();
 
         return PostResource::collection($posts);
     }
@@ -30,15 +30,5 @@ class PostController extends Controller
         abort_unless($post->user->id === auth()->id(), 403, "You are not the owner of the Post");
 
         return new PostResource($post);
-    }
-
-    public function update(int $version, Request $request, Post $post)
-    {
-        //
-    }
-
-    public function destroy(int $version, Post $post)
-    {
-        //
     }
 }
