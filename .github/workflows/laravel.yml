@@ -34,4 +34,4 @@ jobs:
         DB_DATABASE: database/database.sqlite
       run: vendor/bin/phpunit --coverage-clover coverage.xml
     - name: Upload code coverage to Codecov
-      uses: codecov/codecov-action@1.5.0
+      uses: codecov/codecov-action@v1
