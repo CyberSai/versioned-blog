@@ -6,7 +6,7 @@
 
 ## About Versioned Blog
 
-This is an experiment blog to play around with versioning multiple api at the same time in the same code base using limited resource. The idea is to be able to seamlessly update api while supporting older versions this you decide to deprecate them.
+This is an experiment blog to play around with versioning multiple api at the same time in the same code base using limited resource. The idea is to be able to seamlessly update api while supporting older versions this you decide to deprecate later.
 
 ## Approach used
 
