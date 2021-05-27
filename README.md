@@ -1,7 +1,10 @@
 <p align="center">
 <img alt="GitHub Workflow Status (branch)" src="https://img.shields.io/github/workflow/status/CyberSai/versioned-blog/Laravel/main?label=main%20build">
-<img alt="GitHub Workflow Status (branch)" src="https://img.shields.io/github/workflow/status/CyberSai/versioned-blog/Laravel/v1.x?label=v1.x%20build">
+<img alt="Codecov branch" src="https://img.shields.io/codecov/c/github/CyberSai/versioned-blog/main?label=main%20coverage">
 <img alt="GitHub Workflow Status (branch)" src="https://img.shields.io/github/workflow/status/CyberSai/versioned-blog/Laravel/v2.x?label=v2.x%20build">
+<img alt="Codecov branch" src="https://img.shields.io/codecov/c/github/CyberSai/versioned-blog/v2.x?label=v2.x%20coverage">
+<img alt="GitHub Workflow Status (branch)" src="https://img.shields.io/github/workflow/status/CyberSai/versioned-blog/Laravel/v1.x?label=v1.x%20build">
+<img alt="Codecov branch" src="https://img.shields.io/codecov/c/github/CyberSai/versioned-blog/v1.x?label=v1.x%20coverage">
 </p>
 
 ## About Versioned Blog
@@ -22,7 +25,7 @@ Since semantic versioning is used minor and patches are not expected to introduc
 
 ## Outcome
 
-After working on this project, the following are the observed outcomes. They are grouped in pros and cons. 
+After working on this project, the following are the observed outcomes. They are grouped in pros and cons.
 
 ### Cons
 
